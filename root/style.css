@@ -31,7 +31,7 @@ body {
 
 /*HEADER*/
 header {
-    width: 95%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     display: flex;
@@ -62,6 +62,7 @@ nav ul li a:hover {
     width: 100%;
     position: relative;
     text-align: center;
+    z-index: 300;
 }
 
 .myslide {
@@ -103,16 +104,17 @@ nav ul li a:hover {
 /*MENU*/
 .menu {
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     background: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 150;
 }
 
 .menu ul li {
     display: inline-block;
-    padding: 10px 60px;
+    padding: 10px 50px;
     cursor: pointer;
     position: relative;
 
@@ -121,14 +123,12 @@ nav ul li a:hover {
 .menu ul li a {
     color: var(--text-color);
     font-size: 1.2rem;
-    
+
 }
 
 .menu ul li .fas {
     font-size: 1rem;
-    vertical-align:top
-    
-
+    vertical-align: top
 }
 
 .menu ul li:hover a {
@@ -136,11 +136,12 @@ nav ul li a:hover {
 }
 
 .sub-menu {
-    display: none;
     position: absolute;
     top: 50px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -300px);
+    z-index: 70;
+    transition: transform 0.3s ease-out;
 }
 
 .sub-menu ul li {
@@ -159,24 +160,222 @@ nav ul li a:hover {
 }
 
 .menu ul li:hover .sub-menu {
-    display: block;
+    transform: translate(-50%, 0);
+
 }
 
 /*CONTENT*/
 .content {
-    width: 90%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
-.content .title{
+
+.content .title {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-.content_wrap{
+
+.content_wrap {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.content_box{
+
+.content_box {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #333;
+    position: relative;
+    cursor: pointer;
+}
+
+.content_img {}
+
+.content_img img {
+    border-radius: 5px;
+}
+
+.content_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+    transform: translateY(-405px);
+    width: 200px;
+    height: 200px;
+}
+
+.content_inner p,
+i {
+    margin: 5px;
+}
+
+.content_box:hover {
+    box-shadow: none;
+}
+
+.content_box:hover .content_inner {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/*SALE*/
+.sale {
+    width: 100%;
+}
+
+.sale > .title {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sale_wrap {
+    position: relative;
+}
+
+.sale_img img {
+    width: 100%;
+}
+
+.sale_inner {
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+    text-align: right
+}
+
+.sale_inner h3 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.sale_inner input {
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 10px 30px;
+    background: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #333;
+    cursor: pointer;
+}
+
+.sale_inner input:hover {
+    color: #fff;
+    background: var(--dark-color);
+    box-shadow: none;
+}
+
+/*KEWORD*/
+.keyword_title {
+    margin-bottom: 20px;
+}
+
+/*Media Query */
+@media (max-width:1300px) {
+    .myslide {
+        height: 330px;
+        width: 100%;
+    }
+
+    .menu ul li {
+        padding: 10px 35px;
+    }
+
+    .menu ul li a {
+        font-size: 1rem;
+    }
+
+    .sub-menu {
+        top: 48px;
+        left: 50%;
+    }
+
+    .sub-menu ul li {
+        padding: 10px 0;
+        width: 130px;
+    }
+}
+
+@media (max-width:1020px) {
+
+    header {
+        width: 95%;
+    }
+
+    .content {
+        width: 95%;
+        margin-bottom: 50px;
+    }
+
+    .myslide {
+        /*        height: 330px;*/
+        width: 100vw;
+    }
+
+    .myslide img {}
+
+    .menu ul li {
+        padding: 10px 20px;
+    }
+
+    .menu ul li a {
+        font-size: 1rem;
+    }
+
+    .sub-menu {
+        top: 48px;
+        left: 50%;
+    }
+
+    .sub-menu ul li {
+        padding: 10px 0;
+        width: 100px;
+    }
+
+    .sub-menu ul li a {
+        font-size: 0.8rem;
+    }
+
+    .content_box {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px #333;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .content_img img {
+        width: 150px;
+        object-fit: cover;
+    }
+
+    .content_inner {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sale > .title {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+/*
+
+@media (max-width:730px) {
     
 }
+*/
