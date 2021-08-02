@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.promo_container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*TITLE*/
+.promo_title {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    margin: 50px auto;
+    line-height: 2rme;
+    font-size: 1.5rem;
+    font-family: 'Jua', sans-serif;
+}
+
+.promo_title_first {
+    position: relative;
+}
+
+.promo_title_second {
+    position: relative;
+}
+
+.promo_title_first:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #000;
+    width: 40%;
+    height: 3px;
+}
+
+.promo_title_second:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: #000;
+    width: 40%;
+    height: 3px;
+}
+
+/*content*/
+.promo_content {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.promo_content:nth-child(odd) {
+    background: var(--light-color);
+    flex-direction: row-reverse
+}
+
+.promo_content_left {
+    width: 45%;
+}
+
+.promo_content_img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.promo_content_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.promo_content_right {
+    width: 45%;
+}
+
+.promo_content_name {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'jua', sans-serif;
+    letter-spacing: 5px;
+}
+
+.promo_content_details {
+    width: 90%;
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+}
+
+.promoImg {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.promoImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.promoDetails {
+    width: 50%;
+    font-size: 0.9rem;
+    line-height: 2rem;
+}
+
+.promoDetails > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+/*RESERVATION*/
+/*.promo_reservation {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.promo_reservation img{
+    margin: 0 10px;;
+}*/
+
+.reservation_form {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    border: 2px solid var(--main-color);
+    border-radius: 7px;
+    display: flex;
+    padding: 20px;
+
+}
+
+.reservation_form h3 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-right: 1px solid;
+    padding: 0 30px 0 10px;
+}
+
+.reservation_form > form {
+    padding: 0 30px;
+    font-size: 0.9rem;
+}
+
+.reservation_form .formGroup {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.reservation_form form label {
+    margin-right: 10px;
+}
+
+.reservation_form .formGroup input {
+    padding-left: 5px;
+    height: 30px;
+}
+
+.reservation_form h4 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.reservation_form #memo {
+    width: 400px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.reservation_form #submit {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    padding: 10px 30px;
+    background: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reservation_form #submit:hover {
+    color: #fff;
+    background: var(--dark-color);
+    box-shadow: none;
+}

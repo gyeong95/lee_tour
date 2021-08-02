@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main_style.css">
     <title>LEE SEO GYEONG</title>
 </head>
 
@@ -15,11 +15,11 @@
 
     <header>
         <div class="logo">
-            <img src="../img/logo_F-1.png" alt="LOGO">
+            <a href="index.html"><img src="../img/logo_F-1.png" alt="LOGO"></a>
         </div>
         <nav>
             <ul>
-                <li><a href="#">로그인</a></li>
+                <li><a href="login.html">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
                 <li><a href="#">예약확인</a></li>
                 <li><a href="#">이벤트</a></li>
@@ -65,7 +65,7 @@
 
     <div class="menu">
         <ul>
-            <li><a href="#">해외여행 <i class="fas fa-sort-down"></i></a>
+            <li><a href="#">해외여행 <i class="fas fa-sort-down" onclick=""></i></a>
                 <div class="sub-menu">
                     <ul>
                         <li><a href="#">아시아</a></li>
@@ -89,7 +89,7 @@
             <li><a href="#">숙박</a></li>
             <li><a href="#">투어/입장권</a></li>
             <li><a href="#">차량렌트</a></li>
-            <li><a href="#">특가</a></li>
+            <li><a href="promotion.html">특가</a></li>
         </ul>
     </div>
     <div class="content fav">
@@ -97,18 +97,20 @@
         <div class="content_wrap">
             <div class="content_box">
                 <div class="content_img">
-                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                    <img src="../img/Artboard%201.png" alt="">
+                    <!--                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                 </div>
                 <div class="content_inner">
                     <p>여행지</p>
-                    <i class="fas fa-heart"></i>
+                    <i class="far fa-heart"></i>
                     <div class="price">180,000 ~</div>
 
                 </div>
             </div>
             <div class="content_box">
                 <div class="content_img">
-                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                    <img src="../img/Artboard%202.png" alt="">
+                    <!--                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                 </div>
                 <div class="content_inner">
                     <p>여행지</p>
@@ -118,7 +120,8 @@
             </div>
             <div class="content_box">
                 <div class="content_img">
-                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                    <img src="../img/Artboard%203.png" alt="">
+                    <!--                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                 </div>
                 <div class="content_inner">
                     <p>여행지</p>
@@ -129,7 +132,8 @@
             </div>
             <div class="content_box">
                 <div class="content_img">
-                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                    <img src="../img/Artboard%204.png" alt="">
+                    <!--                    <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                 </div>
                 <div class="content_inner">
                     <p>여행지</p>
@@ -144,22 +148,24 @@
         <h3 class="title">선착순 특가</h3>
         <div class="sale_wrap">
             <div class="sale_img">
-                <img src="https://via.placeholder.com/1800x500?text=SALE IMG" alt="">
+                <img src="../img/SALE(1800x500).jpg" alt="">
+                <!--                <img src="https://via.placeholder.com/1800x500?text=SALE IMG" alt="">-->
             </div>
             <div class="sale_inner">
                 <h3>작년 인기 여행지, <br> 특가로 돌아오다.</h3>
-                <input type="button" class="btn" value="특가로 여행가기">
+                <input type="button" class="btn" value="특가로 여행가기" onclick="location.href='promotion.html'">
             </div>
         </div>
     </div>
     <div class="content keyword">
         <h3 class="title">키워드 테마 여행</h3>
         <div class="content_wrap">
-            <div class="content">
+            <div class="contentBox">
                 <h4 class="keyword_title">#키워드 입력</h4>
                 <div class="content_box">
                     <div class="content_img">
-                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                        <img src="../img/Artboard%205.png" alt="">
+                        <!--                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                     </div>
                     <div class="content_inner">
                         <p>여행지테마</p>
@@ -167,11 +173,13 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
+            <div class="contentBox">
                 <h4 class="keyword_title">#키워드 입력</h4>
                 <div class="content_box">
                     <div class="content_img">
-                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                        <img src="../img/Artboard%206.png" alt="">
+
+                        <!--                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                     </div>
                     <div class="content_inner">
                         <p>여행지테마</p>
@@ -179,11 +187,13 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
+            <div class="contentBox">
                 <h4 class="keyword_title">#키워드 입력</h4>
                 <div class="content_box">
                     <div class="content_img">
-                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                        <img src="../img/Artboard%207.png" alt="">
+
+                        <!--                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                     </div>
                     <div class="content_inner">
                         <p>여행지테마</p>
@@ -191,11 +201,13 @@
                     </div>
                 </div>
             </div>
-            <div class="content">
+            <div class="contentBox">
                 <h4 class="keyword_title">#키워드 입력</h4>
                 <div class="content_box">
                     <div class="content_img">
-                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">
+                        <img src="../img/Artboard%208.jpg" alt="">
+
+                        <!--                        <img src="https://via.placeholder.com/200" alt="샘플이미지150">-->
                     </div>
                     <div class="content_inner">
                         <p>여행지테마</p>
@@ -205,11 +217,40 @@
             </div>
         </div>
     </div>
+    <input type="button" value="Night" id="day_night">
     <footer>
-        <div class="footer_wrap">
+        <div class="box-container">
+            <div class="box">
+                <h3>상담문의</h3>
+                <p class="tel">1544-1544</p>
+            </div>
+            <div class="box">
+                <h3>메뉴</h3>
+                <a href="login.html">로그인</a>
+                <a href="#">회원가입</a>
+                <a href="#">예약확인</a>
+                <a href="#">이벤트</a>
+            </div>
+            <div class="box">
+                <h3>바로가기</h3>
+                <a href="#">해외여행</a>
+                <a href="#">국내여행</a>
+                <a href="#">항공</a>
+                <a href="#">숙박</a>
+                <a href="#">투어/입장권</a>
+                <a href="#">차량렌트</a>
+                <a href="promotion.html">특가</a>
+
+            </div>
+            <div class="box">
+                <h3>SNS바로가기</h3>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-facebook-square"></i> facebook</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> youtube</a>
+
+            </div>
         </div>
+        <h3 class="credit"> created by <span> LEE SEO GYEONG </span> | all rights reserved! </h3>
     </footer>
     <script src="../js/jsfile.js"></script>
-</body>
-
-</html>
+</body></html>
